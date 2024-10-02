@@ -1,0 +1,22 @@
+<p>
+  <ion-card>
+    <ion-card-header> 
+      <ion-item>
+        <ion-avatar aria-hidden="true" slot="start">
+          <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <ion-card-title>{{name|titlecase}} {{surname|slice:0:1 |uppercase}}</ion-card-title>
+      </ion-item>     
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-card-title>Nombre</ion-card-title>
+      <p>{{name| titlecase}}</p>
+      <ion-card-title>Apellido</ion-card-title>
+      <p> {{surname|titlecase}}</p>
+      <ion-card-title>Edad</ion-card-title>
+      <p> {{age}}</p>
+
+    </ion-card-content>
+  </ion-card>
+</p>
