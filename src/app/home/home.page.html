@@ -12,9 +12,11 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-grid>
+    <ion-col *ngFor="let person of people">
+      <app-personal-card [name]="person.name" [surname]="person.surname" [age]="person.age"></app-personal-card>
+    </ion-col>
+  </ion-grid>
+  
 
-  <app-personal-card name="juan a" surname="gomez garcia" age="12"></app-personal-card>
-  <app-personal-card name="pepe" surname="lopez gamez" age="12"></app-personal-card>
-  <app-personal-card name="maria" surname="berlanga pozo" age="12"></app-personal-card>
-  <app-personal-card name="luisa" surname="cuevas galan" age="12"></app-personal-card>
 </ion-content>

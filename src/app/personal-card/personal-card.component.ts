@@ -11,7 +11,7 @@ export class PersonalCardComponent  implements OnInit {
 
   @Input('surname') surname:string="";
 
-  @Input('age') age:string="";
+  @Input('age') age:number=0;
 
   constructor() { }
 
