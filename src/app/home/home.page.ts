@@ -11,20 +11,33 @@ export interface Person{
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  nombre: string = '';
+  apellido: string = '';
+  edad: number = 0;
 
   people:Person[] =[];
   constructor() {
-    this.people.push({
-      name:"fernando",
-      surname:"lucas gahah",
-      age:20
-    });
-    this.people.push({
-      name:"haiuad",
-      surname:"lucas gahah",
-      age:23
-    });
   }
+  agregarPersona() {
+    // Validar que los campos no estén vacíos
+    if (this.nombre.trim() !== '' && this.apellido.trim() !== '' && this.edad !== 0) {
+      // Agregar persona a la lista
+      this.people.push({
+        name: this.nombre,
+        surname:this.apellido,
+        age:this.edad
+      });
+
+      // Limpiar los campos
+      this.nombre = '';
+      this.apellido = '';
+      this.edad = 0;
+    } else {
+      console.log('Por favor, ingrese un nombre, apellido y edad');
+    }
+  }
+
+
 
 
 
