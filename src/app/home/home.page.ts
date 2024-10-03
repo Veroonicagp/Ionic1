@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Person } from '../share/interfaces/person';
+import { PersonCard } from '../share/interfaces/person_card';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomePage {
   edad: number = 0;
   isFav: boolean = false
 
-  people:Person[] =[];
+  people:PersonCard[] =[];
   constructor() {
   }
   agregarPersona() {
