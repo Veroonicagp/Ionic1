@@ -16,5 +16,9 @@ export class PersonalCardComponent  implements OnInit {
   constructor() { }
 
   ngOnInit() {}
+  onFavClick($event: Event){
+
+  }
+
 
 }

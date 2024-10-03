@@ -6,6 +6,12 @@
           <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
         </ion-avatar>
         <ion-card-title>{{name|titlecase}} {{surname|slice:0:1 |uppercase}}</ion-card-title>
+        <ion-button class="fav-button" fill="clear" aria-label="Favorite"
+              (click)="onFavClick($event)">
+          <ion-icon slot="icon-only"  color="danger" name="heart"
+          aria-hidden="true"></ion-icon>
+        </ion-button>
+        
       </ion-item>     
     </ion-card-header>
 
