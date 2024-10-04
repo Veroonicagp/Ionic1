@@ -11,10 +11,13 @@ export class HomePage {
   nombre: string = '';
   apellido: string = '';
   edad: number = 0;
-  isFav: boolean = false
+  isFav: boolean = false;
 
   people:PersonCard[] =[];
   constructor() {
+  }
+  onFavClicked(idx:number){
+    this.people[idx].isFav = !this.people[idx].isFav
   }
   agregarPersona() {
     if (this.nombre.trim() !== '' && this.apellido.trim() !== '' && this.edad !== 0) {

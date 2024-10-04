@@ -18,11 +18,13 @@
     <ion-input class="custom-margin" label="Edad" label-placement="floating" fill="outline" [(ngModel)]="edad" placeholder="21"></ion-input>
     <ion-button class="custom-margin"  (click)="agregarPersona()" >Añadir</ion-button>
     <ion-row>
-    <ion-col *ngFor="let person of people">
+    <ion-col *ngFor="let person of people;let idx=index">
       <app-personal-card 
       [name]="person.name" 
       [surname]="person.surname" 
-      [age]="person.age"></app-personal-card>
+      [age]="person.age"
+      (favClicked)="onFavClicked(idx)"
+      ></app-personal-card>
     </ion-col>
   </ion-row>
   </ion-grid>
